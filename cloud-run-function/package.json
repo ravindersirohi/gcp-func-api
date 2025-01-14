@@ -1,4 +1,7 @@
 {
+    "scripts": { 
+        "start": "node index.js" 
+    },
     "name":"github-nodejs-func",
     "version":"0.0.1"
 }
