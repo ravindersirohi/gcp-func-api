@@ -8,5 +8,8 @@ steps:
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
     args: ['functions', 'deploy', 'github-nodejs-func', '--entry-point', 'helloFromGit', '--runtime', 'nodejs22', '--trigger-http', '--allow-unauthenticated']
+  
+options: 
+  logging: 'CLOUD_LOGGING_ONLY'
 
 timeout: '540s'
