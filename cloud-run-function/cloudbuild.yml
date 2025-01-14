@@ -3,7 +3,7 @@ steps:
   - name: 'node:18'
     entrypoint: 'npm'
     args: ['install']
-    dir: '/cloud-run-function'
+    dir: 'cloud-run-function'
 
   # Step 2: Deploy the Cloud Function
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
