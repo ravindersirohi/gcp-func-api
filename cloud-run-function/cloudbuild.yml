@@ -9,7 +9,7 @@ steps:
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
     args: ['functions', 'deploy', 'github-nodejs-func', '--entry-point', 'helloFromGit', '--runtime', 'nodejs18', '--trigger-http', '--allow-unauthenticated']
-    dir: '/cloud-run-function'
+    dir: 'cloud-run-function'
   
 options: 
   logging: 'CLOUD_LOGGING_ONLY'
