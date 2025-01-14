@@ -1,0 +1,12 @@
+steps:
+  # Step 1: Install dependencies
+  - name: 'node:22'
+    entrypoint: 'npm'
+    args: ['install']
+
+  # Step 2: Deploy the Cloud Function
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args: ['functions', 'deploy', 'github-nodejs-func', '--entry-point', 'helloFromGit', '--runtime', 'nodejs22', '--trigger-http', '--allow-unauthenticated']
+
+timeout: '540s'
