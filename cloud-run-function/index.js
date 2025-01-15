@@ -10,8 +10,7 @@ http('helloGithub', async (req, res) => {
     const auth = new GoogleAuth();
     const client = await auth.getIdTokenClient(targetAudiance);
     const secureFuncResponse = await client.request({url});
-    res.send('{message: secureFuncResponse.data}')
-    res.send('Hello from Github func!')
+    res.send({message: secureFuncResponse.data});
   }
   catch(err) {
     res.send({message: err.message})
