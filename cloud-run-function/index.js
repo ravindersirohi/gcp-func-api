@@ -8,8 +8,8 @@ http('helloGithub', async (req, res) => {
     const url = 'https://secure-func-817570901624.europe-west2.run.app';
     const targetAudiance = url;
     const auth = new GoogleAuth();
-    // const client = await auth.getIdTokenClient(targetAudiance);
-    // const secureFuncResponse = await client.request({url});
+    const client = await auth.getIdTokenClient(targetAudiance);
+    const secureFuncResponse = await client.request({url});
     // res.send('{message: secureFuncResponse.data}')
     res.send('Hello from Github func!')
   }
