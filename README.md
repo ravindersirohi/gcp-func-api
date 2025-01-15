@@ -1,5 +1,5 @@
 # gcp-func-api
-Google Clourd Platform cloud run function to implement CI/CD.
+Google Clourd Platform, cloud function to implement CI/CD from Github.
 
 ## Descriptin
 
