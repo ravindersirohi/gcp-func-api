@@ -8,7 +8,7 @@ steps:
   # Step 2: Deploy the Cloud Function
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
-    args: ['functions', 'deploy', 'github-cloud-func', '--entry-point', 'helloGithub', '--runtime', 'nodejs22', '--region', 'europe-west2', '--trigger-http', '--allow-unauthenticated']
+    args: ['functions', 'deploy', 'github-cloud-func', '--entry-point', 'helloGithub', '--runtime', 'nodejs22', '--region', 'europe-west2', '--trigger-http', '--allow-unauthenticated', '--timeout', '300s']
     dir: 'cloud-run-function'
   
 options: 
