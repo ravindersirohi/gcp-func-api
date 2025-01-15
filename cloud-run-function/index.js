@@ -1,5 +1,6 @@
 
 import { http } from '@google-cloud/functions-framework';
+const { GoogleAuth } = require('google-auth-library');
 
 http('helloGithub', async (req, res) => {
   
@@ -10,8 +11,8 @@ http('helloGithub', async (req, res) => {
 
   try{
     const client = await auth.getIdTokenClient(targetAudiance);
-    const funcDemoResp = await client.request({url});
-    res.send({message: funcDemoResp.data})
+    const secureFuncResponse = await client.request({url});
+    res.send({message: secureFuncResponse.data})
   }
   catch(err){
     res.send({message: err.message})
