@@ -4,8 +4,8 @@ import { GoogleAuth } from 'google-auth-library';
 
 http('helloGithub', async (req, res) => {
   try {
-    // Calling securec cloud function.
-    const url = 'https://secure-func-817570901624.europe-west2.run.app';
+    // Calling secure cloud function (for example - https://secure-func-817570901624.europe-west2.run.app).
+    const url = process.env.SECURE_FUNC_URL;
     const targetAudiance = url;
     const auth = new GoogleAuth();
     const client = await auth.getIdTokenClient(targetAudiance);
