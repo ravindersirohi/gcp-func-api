@@ -5,7 +5,8 @@
     "name":"github-cloud-func",
     "version":"0.0.1",
     "dependencies": {
-        "@google-cloud/functions-framework": "^3.0.0"
+        "@google-cloud/functions-framework": "^3.0.0",
+        "google-auth-library": "^8.3.0"
     }
 
 }
