@@ -1,9 +1,9 @@
 # gcp-func-api
-Google Clourd Platform, cloud function to implement CI/CD from Github.
+Google Clourd Platform, cloud function to implement CI/CD via the Github action trigger.
 
 ## Descriptin
 
-CI/CD pipelines integrated on GCP for Nodejs function (github-cloud-func) and calling a secured (secure-func) .NET 8 cloud function function.
+CI/CD pipelines integrated on GCP for Nodejs function (github-cloud-func) and calling a secured (secure-func) .NET 8 cloud run function.
 
 ## GCP permissions for CI/CD
 To integrate Github or any other public devOps tool, list of permissions to be enabled on GCP, manually or via terraform. 
